@@ -1,0 +1,13 @@
+# トラブル
+
+・Module not found: Error: Can't resolve 'vue' 
+    → pacage.json に vue がなかった。。
+
+・You may need an appropriate loader to handle this file type.
+    → rails webpacker:install:vue
+    → pacage.json で vue とloaderのバージョン合わせる
+    https://www.techpit.jp/courses/123/curriculums/126/sections/934/parts/3576
+
+・No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.
+    → vue-loaderのバージョンあげた
+    https://ver-1-0.net/blog/2019/02/17/migration-to-webpack4/
