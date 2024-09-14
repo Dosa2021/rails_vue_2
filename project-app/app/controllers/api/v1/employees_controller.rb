@@ -1,5 +1,5 @@
 class Api::V1::EmployeesController < ApiController
-    before_action :set_employee, only: [:show]
+    before_action :set_employee, only: [:show, :update]
 
     # 拾えなかったExceptionが発生したら500 Internal server errorを応答する
     rescue_from Exception, with: :render_status_500
@@ -25,13 +25,23 @@ class Api::V1::EmployeesController < ApiController
         end
     end
 
+    def update
+        if @employee.update!(employee_params)
+            head :no_content
+        else
+            render json: { errors: @employee.errors.full_messages }, status: :unprocessable_entity
+        end
+    end
+
     private
         def set_employee
             @employee = Employee.find(params[:id])
         end
 
         def employee_params
-            params.fetch(:employee, {}).permit(:name, :department, :gender, :birth, :joined_date, :payment, :note)
+            params.fetch(:employee, {}).permit(
+                :name, :department, :gender, :birth, :joined_date, :payment, :note
+            )
         end
 
         def render_status_404(exception)
