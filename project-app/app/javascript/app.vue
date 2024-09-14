@@ -9,13 +9,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import EmployeeIndexPage from 'EmployeeIndexPage.vue'
+import EmployeeDetailPage from 'EmployeeDetailPage.vue'
 
 const router = new VueRouter({
     routes: [
-        {
-            path: '/',
-            component: EmployeeIndexPage
-        }
+        { path: '/',
+            component: EmployeeIndexPage  },
+        { path: '/employees/:id(\\d+)',  // :id は数値のみに制限する
+            component: EmployeeDetailPage  }
     ]
 })
 
