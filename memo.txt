@@ -9,5 +9,5 @@
     https://www.techpit.jp/courses/123/curriculums/126/sections/934/parts/3576
 
 ・No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.
-    → vue-loaderのバージョンあげた
-    https://ver-1-0.net/blog/2019/02/17/migration-to-webpack4/
+    → ようわからんけど pacage.json の修正で治った。。
+    https://github.com/Dosa2021/rails_vue_2/pull/1/commits/f8fbccc6bb2819c612f8003d5d45b6999a015756#diff-614ef58df0f1935a55db1703e3b844c9315d5ef1c67fd401881466e0fcecee08
