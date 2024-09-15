@@ -1,0 +1,20 @@
+# トラブル
+
+・Module not found: Error: Can't resolve 'vue' 
+    → pacage.json に vue がなかった。。
+
+・You may need an appropriate loader to handle this file type.
+    → rails webpacker:install:vue
+    → pacage.json で vue とloaderのバージョン合わせる
+    https://www.techpit.jp/courses/123/curriculums/126/sections/934/parts/3576
+
+・No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.
+    → ようわからんけど pacage.json の修正で治った。。
+    https://github.com/Dosa2021/rails_vue_2/pull/1/commits/f8fbccc6bb2819c612f8003d5d45b6999a015756#diff-614ef58df0f1935a55db1703e3b844c9315d5ef1c67fd401881466e0fcecee08
+
+・Unpermitted parameters: :id, :created_at, :updated_at
+
+# 参考
+
+・Ruby on Rails, Vue.js で始めるモダン WEB アプリケーション入門
+https://qiita.com/tatsurou313/items/4f18c0d4d231e2fb55f4#backend-%E5%81%B4%E3%81%AB%E3%83%A2%E3%83%87%E3%83%AB%E6%9B%B4%E6%96%B0%E7%94%A8-api-%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B
