@@ -28,6 +28,13 @@ export default {
     },
     methods: {
         updateEmployee: function() {
+            // バリデーション。かなり微妙な気がする。。
+            this.errors = [];
+            if (!this.employee.department) {
+                this.errors.push('department required.');
+                return
+            }
+
             axios
                 .patch(`/api/v1/employees/${this.employee.id}`, this.employee)
                 .then(response => {
