@@ -13,6 +13,7 @@
                     <td>{{ e.name }}</td>
                     <td>{{ e.department }}</td>
                     <td>{{ e.gender }}</td>
+                    <td><router-link :to="{ name: 'EmployeeEditPage', params: { id: e.id } }">編集</router-link></td>
                 </tr>
             </tbody>
         </table>
