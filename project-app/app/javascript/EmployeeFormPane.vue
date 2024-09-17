@@ -34,7 +34,7 @@
         <input v-model="employee.payment" type="number" min="0">
       </div>
       <div>
-        <label>Note</label>
+        <label>Url</label>
         <input v-model="employee.note" type="text">
       </div>
       <button type="submit">Commit</button>

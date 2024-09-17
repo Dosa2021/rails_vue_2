@@ -32,7 +32,18 @@ export default {
             this.errors = [];
             if (!this.employee.department) {
                 this.errors.push('department required.');
-                return
+            }
+
+            if (this.employee.note) {
+                const pattern = /^https?:\/\/[\w]+/
+                let result = this.employee.note.match(pattern);
+                if (result === null) {
+                    this.errors.push('url format invalid.');
+                }
+            }
+
+            if (this.errors.length > 0) {
+                return;
             }
 
             axios
