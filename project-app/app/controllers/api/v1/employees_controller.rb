@@ -8,7 +8,7 @@ class Api::V1::EmployeesController < ApiController
     rescue_from ActiveRecord::RecordNotFound, with: :render_status_404
 
     def index
-        employees = Employee.select(:id, :name, :department, :gender)
+        employees = Employee.all
         render json: employees
     end
 

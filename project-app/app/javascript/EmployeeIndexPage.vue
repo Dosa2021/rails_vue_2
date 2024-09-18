@@ -6,13 +6,14 @@
                     <th>ID</th>
                     <th>name</th>
                     <th>department</th>
-                    <th>gender</th>
+                    <th>url</th>
                 </tr>
                 <tr v-for="e in employees" :key="e.id">
                     <td><router-link :to="{ name: 'EmployeeDetailPage', params: { id: e.id } }">{{ e.id }}</router-link></td>
                     <td>{{ e.name }}</td>
                     <td>{{ e.department }}</td>
-                    <td>{{ e.gender }}</td>
+                    <td>{{ e.note }}</td>
+                    <td><router-link :to="{ name: 'EmployeeEditPage', params: { id: e.id } }">編集</router-link></td>
                 </tr>
             </tbody>
         </table>

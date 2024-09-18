@@ -1,3 +1,6 @@
+http://localhost:3000/#/employees/new
+http://localhost:3000/#/employees/1/edit 
+
 # トラブル
 
 ・Module not found: Error: Can't resolve 'vue' 
